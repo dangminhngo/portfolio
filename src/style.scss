@@ -1,10 +1,18 @@
 @font-face {
   font-family: 'RuneScape UF';
   src: url('./assets/fonts/RuneScape-UF.woff2') format('woff2'),
-      url('./assets/fonts/RuneScape-UF.woff') format('woff');
+    url('./assets/fonts/RuneScape-UF.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -25,11 +33,32 @@
   --clr-accent-light: #d9f99d;
 }
 
-html {
-  box-sizing: border-box;
-}
-
 body {
   font-family: var(--font);
-  font-size: 4rem;
+  font-size: 2rem;
+  background-color: var(--clr-gray-900);
+  color: var(--clr-gray-100);
+}
+
+.loading {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  justify-content: center;
+  background-color: var(--clr-gray-800);
+
+  &.fading {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: 1s ease-out;
+  }
+}
+
+canvas#loading {
+  width: 512px;
+  height: 106px;
+  image-rendering: crisp-edges;
 }

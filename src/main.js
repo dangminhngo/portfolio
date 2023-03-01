@@ -1,7 +1,6 @@
 import './style.scss'
+import setupLoading from './loading'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    LOADING ...
-  </div>
-`
+const root = document.getElementById('root')
+setupLoading()
+root.textContent = 'Root'
