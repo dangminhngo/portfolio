@@ -1,5 +1,5 @@
-import { animateSpritesheetOnCanvasElem } from './lib/animation'
-import loadingSpritesheet from './assets/spritesheets/loading.png'
+import { animateSpritesheetOnCanvasElem } from '../lib/animation'
+import loadingSpritesheet from '../assets/spritesheets/loading.png'
 
 const setupLoading = () => {
   const overlay = document.createElement('div')

@@ -1,6 +1,10 @@
+//import setupLoading from './components/loading'
+import setupHero from './components/hero'
+import setupHeader from './components/header'
+
 import './style.scss'
-import setupLoading from './loading'
 
 const root = document.getElementById('root')
-setupLoading()
-root.textContent = 'Root'
+// setupLoading()
+setupHeader(root)
+setupHero(root)

@@ -31,13 +31,20 @@
   --clr-accent: #bef264;
   --clr-accent-dark: #a3e635;
   --clr-accent-light: #d9f99d;
+
+  --w-md: 1366px;
 }
 
 body {
   font-family: var(--font);
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: var(--clr-gray-900);
   color: var(--clr-gray-100);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .loading {
@@ -49,6 +56,7 @@ body {
   gap: 4rem;
   justify-content: center;
   background-color: var(--clr-gray-800);
+  font-size: 2rem;
 
   &.fading {
     transform: translateY(-100%);
@@ -60,5 +68,46 @@ body {
 canvas#loading {
   width: 512px;
   height: 106px;
+  image-rendering: crisp-edges;
+}
+
+.header {
+  margin: 0 auto;
+  padding: 1rem 0rem;
+  width: var(--w-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    width: 48px;
+    height: 48px;
+    image-rendering: crisp-edges;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    text-transform: uppercase;
+  }
+
+  &__link:hover {
+    color: var(--clr-accent);
+    transition: color 0.25s ease-out;
+  }
+}
+
+section.hero {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas#computer {
+  width: 896px;
+  height: 720px;
   image-rendering: crisp-edges;
 }
