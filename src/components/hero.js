@@ -1,6 +1,8 @@
 import { animateSpritesheetOnCanvasElem } from '../lib/animation'
 import computerSpritesheet from '../assets/spritesheets/computer.png'
 
+import '../styles/hero.scss'
+
 const setupHero = (root) => {
   const section = document.createElement('section')
   section.id = 'hero'

@@ -1,6 +1,8 @@
 import { animateSpritesheetOnCanvasElem } from '../lib/animation'
 import loadingSpritesheet from '../assets/spritesheets/loading.png'
 
+import '../styles/loading.scss'
+
 const setupLoading = () => {
   const overlay = document.createElement('div')
   overlay.className = 'loading'

@@ -1,0 +1,23 @@
+.loading {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  justify-content: center;
+  background-color: var(--clr-gray-800);
+  font-size: 2rem;
+
+  &.fading {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: 1s ease-out;
+  }
+}
+
+#loading {
+  width: 512px;
+  height: 106px;
+  image-rendering: crisp-edges;
+}

@@ -1,4 +1,5 @@
 import logoSrc from '../assets/spritesheets/logo.png'
+import '../styles/header.scss'
 
 const setupHeader = (root) => {
   const header = document.createElement('header')

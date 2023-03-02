@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'RuneScape UF';
+  src: url('../assets/fonts/RuneScape-UF.woff2') format('woff2'),
+    url('../assets/fonts/RuneScape-UF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font: Runescape UF, Roboto, sans-serif;
+
+  --clr-gray-900: #111827;
+  --clr-gray-800: #1f2937;
+  --clr-gray-700: #374151;
+  --clr-gray-600: #4b5563;
+  --clr-gray-500: #6b7280;
+  --clr-gray-400: #9ca3af;
+  --clr-gray-300: #d1d5db;
+  --clr-gray-200: #e5e7eb;
+  --clr-gray-100: #f3f4f6;
+
+  --clr-accent: #bef264;
+  --clr-accent-dark: #a3e635;
+  --clr-accent-light: #d9f99d;
+
+  --w-md: 1366px;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 1.25rem;
+  background-color: var(--clr-gray-900);
+  color: var(--clr-gray-100);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
