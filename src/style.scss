@@ -37,7 +37,7 @@
 
 body {
   font-family: var(--font);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   background-color: var(--clr-gray-900);
   color: var(--clr-gray-100);
 }
@@ -65,7 +65,7 @@ a {
   }
 }
 
-canvas#loading {
+#loading {
   width: 512px;
   height: 106px;
   image-rendering: crisp-edges;
@@ -73,7 +73,7 @@ canvas#loading {
 
 .header {
   margin: 0 auto;
-  padding: 1rem 0rem;
+  padding: 0.75rem 0rem;
   width: var(--w-md);
   display: flex;
   align-items: center;
@@ -89,25 +89,41 @@ canvas#loading {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 4rem;
     text-transform: uppercase;
   }
 
+  &__link,
+  &__link:link,
+  &__link:active {
+    padding: 0.5rem 2rem;
+  }
+
   &__link:hover {
-    color: var(--clr-accent);
-    transition: color 0.25s ease-out;
+    background-color: var(--clr-accent);
+    color: var(--clr-gray-800);
+    transition: all .35s ease-out;
   }
 }
 
-section.hero {
-  height: calc(100vh - 80px);
+.hero {
+  height: calc(100vh - 72px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 4rem;
+
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__name {
+    color: var(--clr-accent);
+  }
 }
 
-canvas#computer {
-  width: 896px;
-  height: 720px;
+#computer {
+  width: 804px;
+  height: 608px;
   image-rendering: crisp-edges;
 }
