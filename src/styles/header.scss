@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
 
-  &__logo {
+  #logo {
     width: 48px;
     height: 48px;
     image-rendering: crisp-edges;
@@ -31,4 +31,3 @@
     transition: all .35s ease-out;
   }
 }
-

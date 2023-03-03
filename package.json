@@ -20,5 +20,8 @@
     "sass": "^1.58.3",
     "vite": "^4.1.0",
     "vite-plugin-eslint": "^1.8.1"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.12"
   }
 }

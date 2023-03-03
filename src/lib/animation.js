@@ -1,24 +1,49 @@
-export const animateSpritesheetOnCanvasElem = (canvas, src, width, height, speed, numOfFrames) => {
+import Typed from 'typed.js'
+
+export const animateSpritesheetOnCanvasElem = (
+  canvas,
+  src,
+  width,
+  height,
+  numOfFrames,
+  delayFrame,
+  delayAnimation
+) => {
   const ctx = canvas.getContext('2d')
   canvas.width = width
   canvas.height = height
 
   const spritesheet = new Image()
   spritesheet.src = src
-  let frame = 0,
-    gameFrame = 0
+
+  let start = Date.now(),
+    end = start
 
   const animate = () => {
-    frame = Math.floor(gameFrame * speed)
+    const index = Math.floor((end - start) / delayFrame)
     ctx.clearRect(0, 0, width, height)
-    ctx.drawImage(spritesheet, 0, frame * height, width, height, 0, 0, width, height)
+    ctx.drawImage(spritesheet, 0, index * height, width, height, 0, 0, width, height)
     requestAnimationFrame(animate)
-    if (frame > numOfFrames - 1) {
-      gameFrame = 0
+    if (index > numOfFrames - 1) {
+      end = start = Date.now()
       return
     }
-    gameFrame++
+
+    end = Date.now()
   }
+  console.log(delayAnimation)
 
   animate()
+}
+
+export const createTypingAnimation = (elem, strings, speed) => {
+  const typed = new Typed(elem, {
+    strings,
+    typeSpeed: speed,
+    loop: true,
+    backDelay: 2000,
+    backSpeed: Math.floor(speed / 4),
+  })
+
+  return typed
 }

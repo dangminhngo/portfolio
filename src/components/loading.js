@@ -35,7 +35,7 @@ const setupLoading = () => {
     }
   })
 
-  animateSpritesheetOnCanvasElem(canvas, loadingSpritesheet, 256, 53, 0.3, 60)
+  animateSpritesheetOnCanvasElem(canvas, loadingSpritesheet, 256, 53, 60, 150, 300)
 }
 
 export default setupLoading

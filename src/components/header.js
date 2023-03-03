@@ -1,13 +1,14 @@
-import logoSrc from '../assets/spritesheets/logo.png'
+import { animateSpritesheetOnCanvasElem } from '../lib/animation'
+import logoSpritesheet from '../assets/spritesheets/logo.png'
 import '../styles/header.scss'
 
 const setupHeader = (root) => {
   const header = document.createElement('header')
   header.className = 'header'
-  const logo = document.createElement('img')
-  logo.src = logoSrc
-  logo.className = 'header__logo'
+  const logo = document.createElement('canvas')
+  logo.id = 'logo'
   header.appendChild(logo)
+
   const nav = document.createElement('nav')
   nav.className = 'header__nav'
   nav.innerHTML = `<ul class="header__list">
@@ -18,6 +19,8 @@ const setupHeader = (root) => {
   </ul>`
   header.appendChild(nav)
   root.appendChild(header)
+
+  animateSpritesheetOnCanvasElem(logo, logoSpritesheet, 24, 24, 18, 100, 200)
 }
 
 export default setupHeader
