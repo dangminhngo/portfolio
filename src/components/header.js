@@ -20,7 +20,7 @@ const setupHeader = (root) => {
   header.appendChild(nav)
   root.appendChild(header)
 
-  animateSpritesheetOnCanvasElem(logo, logoSpritesheet, 24, 24, 18, 100, 8000)
+  animateSpritesheetOnCanvasElem(logo, logoSpritesheet, 20, 20, 14, 100, 8000)
 }
 
 export default setupHeader
