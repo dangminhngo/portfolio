@@ -1,13 +1,19 @@
 import Typed from 'typed.js'
 
+const clamp = (value, min, max) => {
+  if (value < min) return min
+  if (value > max) return max
+  return value
+}
+
 export const animateSpritesheetOnCanvasElem = (
   canvas,
   src,
   width,
   height,
   numOfFrames,
-  delayFrame,
-  delayAnimation
+  delay,
+  delayAnim
 ) => {
   const ctx = canvas.getContext('2d')
   canvas.width = width
@@ -20,18 +26,20 @@ export const animateSpritesheetOnCanvasElem = (
     end = start
 
   const animate = () => {
-    const index = Math.floor((end - start) / delayFrame)
+    const value = Math.floor((end - start) / delay)
+    const index = clamp(value, 0, numOfFrames - 1)
+
     ctx.clearRect(0, 0, width, height)
     ctx.drawImage(spritesheet, 0, index * height, width, height, 0, 0, width, height)
+
     requestAnimationFrame(animate)
-    if (index > numOfFrames - 1) {
-      end = start = Date.now()
-      return
+
+    if (value > numOfFrames - 1 + Math.ceil(delayAnim / delay)) {
+      start = Date.now()
     }
 
     end = Date.now()
   }
-  console.log(delayAnimation)
 
   animate()
 }
