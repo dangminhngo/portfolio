@@ -1,5 +1,5 @@
 import { animateSpritesheetOnCanvasElem, createTypingAnimation } from '../lib/animation'
-import computerSpritesheet from '../assets/spritesheets/computer.png'
+import keyboardSpritesheet from '../assets/spritesheets/keyboard.png'
 import mouseSpritesheet from '../assets/spritesheets/mouse.png'
 
 import '../styles/hero.scss'
@@ -14,9 +14,9 @@ const setupHero = (root) => {
   text.innerHTML = '<span id="text"></span>'
   section.appendChild(text)
 
-  const computerCanvas = document.createElement('canvas')
-  computerCanvas.id = 'computer'
-  section.appendChild(computerCanvas)
+  const keyboardCanvas = document.createElement('canvas')
+  keyboardCanvas.id = 'keyboard'
+  section.appendChild(keyboardCanvas)
 
   const mouseCanvas = document.createElement('canvas')
   mouseCanvas.id = 'mouse'
@@ -27,15 +27,14 @@ const setupHero = (root) => {
   createTypingAnimation(
     document.getElementById('text'),
     [
-      'Hey, my name is <strong class="hero__strong">Dang Minh Ngo</strong>.',
+      'Hi, my name is <strong class="hero__strong">Dang Minh Ngo</strong>.',
       'You can also call me <strong class="hero__strong">Jaime</strong>.',
       'I\'m a <strong class="hero__strong">Front-end Developer</strong>.',
-      'I love drawing <strong class="hero__strong">pixel art</strong>.',
-      'I live in <strong class="hero__strong">Ho Chi Minh, Vietnam</strong>.',
+      'I love buiding <strong class="hero__strong">things</strong>.',
     ],
     80
   )
-  animateSpritesheetOnCanvasElem(computerCanvas, computerSpritesheet, 402, 304, 45, 150, 3000)
+  animateSpritesheetOnCanvasElem(keyboardCanvas, keyboardSpritesheet, 352, 184, 122, 120, 0)
   animateSpritesheetOnCanvasElem(mouseCanvas, mouseSpritesheet, 16, 16, 5, 200, 600)
 }
 

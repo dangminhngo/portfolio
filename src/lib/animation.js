@@ -49,8 +49,8 @@ export const createTypingAnimation = (elem, strings, speed) => {
     strings,
     typeSpeed: speed,
     loop: true,
-    backDelay: 2000,
-    backSpeed: Math.floor(speed / 4),
+    backDelay: 480,
+    backSpeed: 0,
   })
 
   return typed

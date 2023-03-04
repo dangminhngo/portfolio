@@ -4,10 +4,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 6rem;
 
   &__title {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   &__strong {
@@ -15,9 +15,9 @@
   }
 }
 
-#computer {
-  width: 804px;
-  height: 608px;
+#keyboard {
+  width: 704px;
+  height: 368px;
   image-rendering: crisp-edges;
 }
 
