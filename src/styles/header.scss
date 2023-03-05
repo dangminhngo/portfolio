@@ -1,11 +1,19 @@
 .header {
-  margin: 0 auto;
-  padding: 1rem 0rem;
-  width: var(--w-md);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: fixed;
+  z-index: 1000;
+  padding: 1.5rem 0rem;
+  width: 100%;
+  background-color: var(--clr-gray-900);
   border-bottom: 1px solid var(--clr-gray-800);
+  font-size: 1.5rem;
+
+  &__container {
+    margin: 0 auto;
+    width: var(--w-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   #logo {
     width: 40px;
@@ -29,6 +37,6 @@
   &__link:hover {
     background-color: var(--clr-accent);
     color: var(--clr-gray-800);
-    transition: all .35s ease-out;
+    transition: all 0.35s ease-out;
   }
 }

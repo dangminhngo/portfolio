@@ -33,16 +33,41 @@
   --clr-accent-light: #d9f99d;
 
   --w-md: 1366px;
+  --w-sm: 800px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font);
-  font-size: 1.5rem;
+  font-size: 2rem;
   background-color: var(--clr-gray-900);
-  color: var(--clr-gray-100);
+  color: var(--clr-gray-200);
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+p {
+  line-height: 1.5;
+}
+
+p:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.heading {
+  text-transform: uppercase;
+}
+
+p.highlight {
+  color: var(--clr-accent);
 }

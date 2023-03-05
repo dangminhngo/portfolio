@@ -5,9 +5,13 @@ import '../styles/header.scss'
 const setupHeader = (root) => {
   const header = document.createElement('header')
   header.className = 'header'
+
+  const container = document.createElement('div')
+  container.className = 'header__container'
+
   const logo = document.createElement('canvas')
   logo.id = 'logo'
-  header.appendChild(logo)
+  container.appendChild(logo)
 
   const nav = document.createElement('nav')
   nav.className = 'header__nav'
@@ -17,7 +21,8 @@ const setupHeader = (root) => {
     <li><a href="#projects" class="header__link">Projects</a></li>
     <li><a href="#contact" class="header__link">Blog</a></li>
   </ul>`
-  header.appendChild(nav)
+  container.appendChild(nav)
+  header.appendChild(container)
   root.appendChild(header)
 
   animateSpritesheetOnCanvasElem(logo, logoSpritesheet, 20, 20, 14, 100, 8000)
