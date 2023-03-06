@@ -1,5 +1,5 @@
 import { calculateAge } from '../lib/utils'
-import avatar from '../assets/spritesheets/avatar.png'
+import avatar from '../assets/images/avatar.png'
 import '../styles/about.scss'
 
 const setupAbout = (root) => {

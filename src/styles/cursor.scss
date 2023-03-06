@@ -1,0 +1,12 @@
+.cursor {
+  pointer-events: none;
+  user-select: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+
+  &__img {
+    image-rendering: crisp-edges;
+  }
+}
