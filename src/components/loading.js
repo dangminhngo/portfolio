@@ -18,14 +18,14 @@ const setupLoading = () => {
 
   const screenTimeoutId = setTimeout(() => {
     overlay.classList.add('fading')
-  }, 10000)
+  }, 11960)
 
   let percentage = 0
   const percentageIntervalId = setInterval(() => {
     percentage += 10
     if (percentage >= 100) percentage = 100
     text.textContent = 'LOADING ... ' + percentage + '%'
-  }, 800)
+  }, 1000)
 
   overlay.addEventListener('transitionend', (e) => {
     if (e.propertyName === 'transform') {
@@ -35,7 +35,7 @@ const setupLoading = () => {
     }
   })
 
-  animateSpritesheetOnCanvasElem(canvas, loadingSpritesheet, 256, 53, 60, 150, 300)
+  animateSpritesheetOnCanvasElem(canvas, loadingSpritesheet, 256, 53, 72, 80, 300)
 }
 
 export default setupLoading

@@ -35,7 +35,7 @@ const setupHero = (root) => {
     80
   )
   animateSpritesheetOnCanvasElem(keyboardCanvas, keyboardSpritesheet, 352, 184, 122, 120, 0)
-  animateSpritesheetOnCanvasElem(mouseCanvas, mouseSpritesheet, 16, 16, 5, 150, 600)
+  animateSpritesheetOnCanvasElem(mouseCanvas, mouseSpritesheet, 17, 39, 4, 200, 800)
 }
 
 export default setupHero
